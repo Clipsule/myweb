@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客 - 首页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="shouye.css">     <!--首页主体和页脚样式 -->
+    <link rel="stylesheet" href="daohanglan.css"> <!--导航栏样式 -->
+    <link rel="stylesheet" href="zhuneirong.css"> <!--主内容区样式 -->
+    <link rel="stylesheet" href="tese.css">       <!--特色区域样式 -->
+
+    <style>
+        /* 响应式设计 */
+        @media (max-width: 1000px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            .featured-content {
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-content {
+                padding: 30px 20px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        .biaoqingbao{
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 二次元背景 -->
+    <div class="anime-background"></div>
+    
+    <!-- 毛玻璃装饰元素 -->
+    <div class="glass-circle"></div>
+    <div class="glass-circle"></div>
+    <div class="glass-circle"></div>
+    
+    <div class="glass-element"></div>
+    <div class="glass-element"></div>
+    <div class="glass-element"></div>
+    
+    <!-- 顶部导航栏 -->
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-sparkles"></i>
+            </div>
+            <div class="logo-text">Clipsule</div>
+        </a>
+        
+        <div class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">文章</a>
+            <a href="#">图库</a>
+            <a href="#">留言板</a>
+            <a href="#">关于</a>
+        </div>
+
+        <a href="user.html"> <!-- 点解跳转个人主页 -->
+            <div class="user-info">
+                <div class="user-avatar">萌</div>
+                <span class="username">萌小兔</span>
+            </div>
+        </a>
+            
+    </header>
+    
+    <!-- 主内容区 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到我的<span>个人博客</span></h1>
+            <p>这里是我分享趣事和电视的空间。探索无尽的幻想世界，发现令人心动的故事，一起沉浸在空间的美妙宇宙中！</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">
+                    <i class="fas fa-book-open"></i> 浏览文章
+                </a>
+                <!-- <a href="#" class="cta-button secondary">
+                    <i class="fas fa-paint-brush"></i> 查看作品
+                </a> -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- 博客内容区 -->
+    <section class="blog-section">
+        <div class="section-title">
+            <h2>最新文章</h2>
+            <p>探索我最近的趣事</p>
+        </div>
+        
+        <div class="blog-posts">
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="https://imgheybox1.max-c.com/web/bbs/2025/05/12/62a1333e3306eafbfc4426577ee3367c/thumb.png?imageMogr2/auto-orient/ignore-error/1/format/jpg/thumbnail/1125x600%3E"动漫评论">
+                    <div class="category-tag">动漫评论</div>
+                </div>
+                <div class="card-content">
+                    <h3>《魔女之旅》深度解析</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> 2025-7-18</span>
+                        <span><i class="far fa-eye"></i> 2,843</span>
+                        <span style="display: inline-flex; align-items: center;">
+                            <img 
+                                class="biaoqingbao" 
+                                height="40" 
+                                src="https://imgheybox1.max-c.com/bbs/2023/06/07/1120b5b9b4f274b59b55044779838395.jpeg" 
+                                alt="依蕾娜表情包"
+                                style="margin-right: 8px;"
+                            > <!-- 添加间距避免文字紧贴图片 -->
+                                依蕾娜！依蕾娜！
+                        </span>
+                    </div>
+                    <p>《魔女之旅》是一部充满奇幻色彩的动画作品，讲述了年轻魔女伊蕾娜在异世界中旅行的故事...</p>
+                    <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="card-image">
+                    <img src="https://img.taicike.com/m00/f9/d9/ad4c478e7c234f5e2a76acc5ac1e2cd7_c_300_200.jpg" alt="逆爱">
+                    <div class="category-tag">电视剧</div>
+                </div>
+                <div class="card-content">
+                    <h3>《逆爱》该剧改编自柴鸡蛋创作的小说《逆袭》</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> 2023-10-05</span>
+                        <span><i class="far fa-eye"></i> 3,521</span>
+                        <span><i class="far fa-comment"></i> 42</span>
+                    </div>
+                    <p>讲述了一对性格迥异的青年，因一场从敌意开始的关系，在误解与竞争中相识，在相伴与成长中重塑彼此、靠近彼此的故事。</p>
+                    <a href="https://le.le081027.cn/s/777de5abc1614dd78c" class="read-more">立即观看 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- <article class="blog-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="文化分析">
+                    <div class="category-tag">文化分析</div>
+                </div>
+                <div class="card-content">
+                    <h3>日本动漫中的神道教元素解析</h3>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> 2023-09-22</span>
+                        <span><i class="far fa-eye"></i> 2,156</span>
+                        <span><i class="far fa-comment"></i> 38</span>
+                    </div>
+                    <p>探索《千与千寻》《你的名字》等经典作品中蕴含的日本神道教文化元素，分析这些元素如何增强故事深度和文化认同...</p>
+                    <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article> -->
+        </div>
+    </section>
+    
+    <!-- 特色区域 -->
+    <section class="featured-section">
+        <div class="featured-content">
+            <div class="featured-image">
+                <img src="https://imgheybox1.max-c.com/bbs/2023/06/07/483dfe29b936b13b5e9180ae4c6d1909.gif" alt="依蕾娜动图">
+            </div>
+            <div class="featured-text">
+                <h2>「灰之魔女」<span>依蕾娜</span></h2>
+                <p>伊蕾娜（日语：イレイナ）是由白石定规创作、あずーる插画的轻小说《魔女之旅》及其衍生作品的登场角色。</p>
+                <p>15岁就已取得魔法使中的最高位「魔女」称号的天才少女。其魔女名为「灰之魔女」</p>
+                <p>留着灰白长发、披着黑色长袍、戴着魔女帽，胸口别有魔女之证的「星形胸饰」。</p>
+                <p>不喜欢吃菇类食物。主食中最爱吃面包。</p>
+                <a href="#" class="cta-button">
+                    <i class="fas fa-palette"></i> 查看作品集
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>关于博客</h3>
+                <p style="color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 20px;">
+                    分享趣事的个人空间，专注于动漫评论、看电视剧和趣事分享。
+                </p>
+                <div class="social-links">
+                    <a href="#" style="text-decoration: none;"><i class="fab fa-tiktok" ></i></a>
+                    <a href="#" style="text-decoration: none;"><i class="fab fa-weibo"></i></a>
+                    <a href="#" style="text-decoration: none;"><i class="fab fa-bilibili"></i></a>
+                    <a href="#" style="text-decoration: none;"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>导航</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 首页</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 文章</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 图库</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 留言板</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 关于</a></li>
+                </ul>
+            </div>
+            
+            <!-- <div class="footer-column">
+                <h3>分类</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 动漫评论</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 插画教程</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 角色设计</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 文化分析</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> 同人创作</a></li>
+                </ul>
+            </div> -->
+            
+            <div class="footer-column">
+                <h3>联系我</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-envelope"></i> 2132858541@qq.com</a></li>
+                    <li><a href="#"><i class="fa fa-wechat"></i> csl081027</a></li>
+                    <!-- <li><a href="#"><i class="fab fa-weibo"></i> @AniBlog官方</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> 上海市</a></li> -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            © 2025 Clipsule Clipsule的网站 | 未经许禁止转载
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取用户信息
+            const nickname = localStorage.getItem('blogNickname');
+            const avatarFile = localStorage.getItem('blogAvatar');
+            
+            // 更新导航栏 - 昵称和头像
+            if (nickname) {
+                document.querySelector('.username').textContent = nickname;
+            }
+            
+            if (avatarFile) {
+                const avatarContainer = document.querySelector('.user-avatar');
+                // 创建图片元素
+                const avatarImg = document.createElement('img');
+                avatarImg.src = `avatars/${avatarFile}`;
+                avatarImg.alt = '用户头像';
+                avatarImg.style.width = '100%';
+                avatarImg.style.height = '100%';
+                avatarImg.style.borderRadius = '50%';
+                avatarImg.style.objectFit = 'cover';
+                
+                // 替换原有内容
+                avatarContainer.innerHTML = '';
+                avatarContainer.appendChild(avatarImg);
+                
+                // 移除原有背景
+                avatarContainer.style.background = 'none';
+            }
+            
+            // 模拟用户信息（如果没有登录）
+            if (!nickname) {
+                const username = "萌小兔";
+                const firstChar = username.charAt(0);
+                document.querySelector('.username').textContent = username;
+                document.querySelector('.user-avatar').textContent = firstChar;
+            }
+            
+            // 卡片动画
+            const cards = document.querySelectorAll('.blog-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                    card.style.transition = "opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1), transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1)";
+                }, 300 * index);
+            });
+            
+            // 导航链接悬停效果
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    link.style.color = "#ff6b9c";
+                });
+                
+                link.addEventListener('mouseleave', () => {
+                    if (!link.classList.contains('active')) {
+                        link.style.color = "rgba(255, 255, 255, 0.85)";
+                    }
+                });
+            });
+            
+            // 背景浮动效果增强
+            const circles = document.querySelectorAll('.glass-circle');
+            circles.forEach(circle => {
+                circle.addEventListener('mouseover', () => {
+                    circle.style.transform = "scale(1.1)";
+                });
+                
+                circle.addEventListener('mouseout', () => {
+                    circle.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

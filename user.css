@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+}
+
+:root {
+    --primary: #ff6b9c;
+    --secondary: #6bcbff;
+    --accent: #ffcb6b;
+    --dark: #1e1e2e;
+    --light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-hover: rgba(255, 255, 255, 0.25);
+    --pink: #ff7eb9;
+    --blue: #7ccfff;
+    --purple: #b28dff;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f1a30);
+    color: var(--light);
+    overflow-x: hidden;
+    position: relative;
+    padding: 0;
+}
+
+/* 装饰背景 */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--pink), transparent);
+    opacity: 0.15;
+    filter: blur(30px);
+    animation: float 15s infinite linear;
+}
+
+.bubble:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+    animation-duration: 20s;
+}
+
+.bubble:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 60%;
+    right: 10%;
+    background: radial-gradient(circle, var(--blue), transparent);
+    animation-duration: 25s;
+    animation-delay: -5s;
+}
+
+.bubble:nth-child(3) {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    left: 15%;
+    background: radial-gradient(circle, var(--purple), transparent);
+    animation-duration: 30s;
+    animation-delay: -10s;
+}
+
+.bubble:nth-child(4) {
+    width: 180px;
+    height: 180px;
+    top: 20%;
+    right: 20%;
+    background: radial-gradient(circle, var(--accent), transparent);
+    animation-duration: 18s;
+    animation-delay: -7s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(20px, 40px) rotate(90deg);
+    }
+    50% {
+        transform: translate(40px, 0px) rotate(180deg);
+    }
+    75% {
+        transform: translate(20px, -40px) rotate(270deg);
+    }
+}
