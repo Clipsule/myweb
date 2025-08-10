@@ -137,7 +137,7 @@
                         <div class="inputBox">
                             <input type="submit" value="登录">
                         </div>
-                        <p class="forget">没有账户？<a href="zhuce.html">注册</a></p>
+                        <p class="forget">没有账户？<a href="index.html">注册</a></p>
                     </form>
                 </div>
             </div>
@@ -195,6 +195,26 @@
                 });
             }
         });
+    </script>
+    <!-- 在登录成功回调中增加手机号存储 -->
+    <script>
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const phone = document.getElementById('phone').value;
+        
+        // 存储登录手机号
+        localStorage.setItem('blogPhone', phone); // 新增
+        
+        // 显示加载动画
+        const loader = document.getElementById('pageLoader');
+        loader.style.display = 'flex';
+        loader.classList.remove('fade-out');
+        
+        // 模拟登录过程
+        setTimeout(function() {
+            window.location.href = 'shouye.html';
+        }, 1500);
+    });
     </script>
 </body>
 </html>

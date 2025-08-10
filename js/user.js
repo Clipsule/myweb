@@ -209,9 +209,22 @@ function checkEmptyState() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+        // 设置返回按钮功能
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            // 如果有上一页历史记录，则返回上一页
+            if (document.referrer) {
+                window.location.href = document.referrer;
+            } else {
+                // 如果没有来源页面，默认返回首页
+                window.location.href = 'shouye.html';
+            }
+        });
+
         // 从localStorage获取用户信息
         const nickname = localStorage.getItem('blogNickname') || '萌小兔';
-        const phone = localStorage.getItem('blogPhone') || '13800138000';
+        const phone = localStorage.getItem('blogPhone') || '13800138000'; // 确保键名是'blogPhone'
         const avatarFile = localStorage.getItem('blogAvatar') || '';
         
         // 更新用户名
@@ -228,7 +241,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // 更新手机号（部分隐藏）
-        const formattedPhone = phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+        // 修改格式化逻辑（适配11位手机号）
+        const formattedPhone = phone.length === 11 ? 
+            phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2') : 
+            phone;
         document.getElementById('phone').textContent = formattedPhone;
         
         // 设置按钮功能

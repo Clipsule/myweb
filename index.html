@@ -191,5 +191,23 @@
             window.location.href = 'login.html';
         });
     </script>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nickname = document.getElementById('nickname').value;
+            const phone = document.getElementById('phone').value; // 获取手机号
+            const randomAvatarIndex = Math.floor(Math.random() * 226) + 1;
+            const avatarFile = `avatar${randomAvatarIndex}.png`;
+            
+            // 存储用户信息（增加手机号）
+            localStorage.setItem('blogNickname', nickname);
+            localStorage.setItem('blogPhone', phone); // 新增
+            localStorage.setItem('blogAvatar', avatarFile);
+            
+            alert('注册成功！');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
